@@ -610,6 +610,7 @@ sub execute
 							'brand_name' => {'type' => "string","copy_to" => "original.std.brand_name"},
 							'price' => {'type' => 'float'},
 							'price_full' => {'type' => 'float'},
+							'amount' => {'type' => 'integer'},
 							'sellscore' => {'type' => 'float'},
 							'rating' => {'type' => 'float'},
 							'cat' => {'type'=>'long','index'=>'not_analyzed'},
@@ -638,7 +639,7 @@ sub execute
 					}
 					
 				},
-				
+
 				'settings' => {
 					'version' => {
 						'c3' => $version,
