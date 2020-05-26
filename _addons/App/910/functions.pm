@@ -1792,7 +1792,7 @@ sub _product_hash
 	}
 	
 	my %product=$sth0{'sth'}->fetchhash();
-		foreach (keys %product){delete $product{$_} unless $product{$_}};
+		foreach (keys %product){delete $product{$_} unless $product{$_} || $_ eq 'amount'};
 	
 	%{$product{'metahash'}}=App::020::functions::metadata::parse($product{'metadata'});
 	delete $product{'metadata'};
